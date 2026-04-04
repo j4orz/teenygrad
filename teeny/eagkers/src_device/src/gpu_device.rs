@@ -1,6 +1,5 @@
 use cuda_std::kernel;
-
-pub type T = f32; // Input/output type shared with the `rustc-cuda-basic` crate.
+use crate::T;
 
 #[allow(improper_ctypes_definitions)]
 #[kernel] pub unsafe fn add(a: &[T], b: &[T], c: *mut T) {
